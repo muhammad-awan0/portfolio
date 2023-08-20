@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="font-outfit font-normal">
      <Navbar navItems={["about","experiences","projects","contact"]}/>
-     <Header name={"Muhammad Awan"} />
+     <Header name={"Muhammad Awan."} />
     </div>
     
   )

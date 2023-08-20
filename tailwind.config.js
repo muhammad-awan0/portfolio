@@ -11,6 +11,10 @@ export default {
         'barlow': ['Barlow Semi Condensed', 'sans-serif'],
         'outfit': ['Outfit', 'sans-serif'],
       },
+      fontSize: {
+        '109': ['109px','109px'], 
+      },
+
     },
   },
   plugins: [],
