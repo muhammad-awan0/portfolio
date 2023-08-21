@@ -7,6 +7,7 @@ export default {
       colors: {
         "custom-blue": "#04051F",
         "custom-pink": "#CA80CB",
+        "about-me-blue":"#5798BD",
       },
       fontFamily: {
         'barlow': ['Barlow Semi Condensed', 'sans-serif'],
