@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         "custom-blue": "#04051F",
+        "custom-pink": "#CA80CB",
       },
       fontFamily: {
         'barlow': ['Barlow Semi Condensed', 'sans-serif'],
