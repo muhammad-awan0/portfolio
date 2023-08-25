@@ -3,7 +3,7 @@ import portraitSVG from './Portrait.svg';
 const About = () => {
   return (
     <div className="ml-[221.7px] mt-[300px]" id="about-section">
-      <h1 className="text-custom-pink font-bold text-xl">ABOUT ME 💬</h1>
+      <h1 className="text-custom-pink font-bold text-[25px]">ABOUT ME 💬</h1>
       <div className="flex flex-row">
         <div className="text-white w-[628px] h-[478px] text-xl mr-10 leading-9">
           <p className='mt-3'>
@@ -22,7 +22,7 @@ const About = () => {
           
           <p className='mt-10'>
             Anyways, here on my website, I hope to share my
-            <span className='text-about-me-blue'>experiences, projects, and insights</span> as I continue to grow and explore!
+             <span className='text-about-me-blue'>experiences, projects, and insights</span> as I continue to grow and explore!
           </p>
         </div>
         <img className="mb-10 ml-10" src={portraitSVG} alt="portrait-MuhammadAwan" />

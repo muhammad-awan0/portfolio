@@ -8,6 +8,8 @@ export default {
         "custom-blue": "#04051F",
         "custom-pink": "#CA80CB",
         "about-me-blue":"#5798BD",
+        "heading-blue":"#00C2FF",
+        "projects-purple":"#9B67F0"
       },
       fontFamily: {
         'barlow': ['Barlow Semi Condensed', 'sans-serif'],
