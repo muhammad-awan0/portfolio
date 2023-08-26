@@ -1,5 +1,5 @@
 import portfolioSVG from './Portfolio-img.svg';
-import middleBlob from './middle-blob.svg';
+
 
 interface ProjectDetails {
   name: string;
@@ -15,12 +15,7 @@ const projectsDetails: ProjectDetails[] = [
     details: "My very first personal project is this website, displaying my work experiences, interests, and journey as I become a more skilled developer",
     tools: ["Tailwind", "React", "Typescript"],
   },
-  {
-    name: "This Website",
-    image: portfolioSVG,
-    details: "My very first personal project is this website, displaying my work experiences, interests, and journey as I become a more skilled developer",
-    tools: ["Tailwind", "React", "Typescript"],
-  },
+
   // ... other projects
 ];
 
@@ -31,7 +26,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project, flipLayout }: ProjectCardProps) => {
   return (
-    <div className={`relative flex flex-row w-[990px] h-[auto] ml-[90px] ${flipLayout ? 'flex-row-reverse' : 'flex-row'}`}>
+    <div className={`relative flex flex-row w-[990px] ml-[90px] mt-[-100px] ${flipLayout ? 'flex-row-reverse' : 'flex-row'}`}>
       <img src={project.image} alt={project.name} className="z-10 mt-[200px] w-[494px] h-[332.99px]" />
       <div className={`flex flex-col self-center z-20 mt-[180px] ${flipLayout ? 'mr-[-50px]': 'ml-[-50px]'}`}>
         <h1 className={`mb-7 font-semibold text-[21px] text-[#3CA2AF] ${flipLayout ? 'text-left' : 'text-right'}`}>{project.name}</h1>
@@ -54,7 +49,7 @@ const ProjectCard = ({ project, flipLayout }: ProjectCardProps) => {
 
 const Projects = () => {
   return (
-    <div className="ml-[221.7px]">
+    <div className="ml-[221.7px] h-[800px]">
       <h1 id="projects-section" className="text-projects-purple font-bold text-[25px]">
         PERSONAL PROJECTS 🔥
       </h1>
