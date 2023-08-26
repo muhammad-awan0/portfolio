@@ -44,7 +44,7 @@ const Experiences = () => {
 
   return (
     <div
-      className="relative ml-[221.7px] mt-[300px] h-[1200px]"
+      className="relative ml-[221.7px] mt-[300px] h-[1000px]"
       id="experiences-section"
     >
       <h1 className="text-heading-blue font-bold text-[25px] absolute z-50">
@@ -55,7 +55,7 @@ const Experiences = () => {
         alt="experience-blob"
         className="absolute z-0 left-[-130px] top-[-280px] h-[1300px]"
       />
-      <div className="flex flex-row mt-[160px] ml-[300px] absolute z-50">
+      <div className="flex flex-row mt-[250px] ml-[300px] absolute z-50">
         <div className="text-white">
           <ul>
             {experiencesDetails.map((experience, index) => (
