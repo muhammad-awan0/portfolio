@@ -27,7 +27,7 @@ const experiencesDetails = [
   {
     name: "The Gryphon Machine",
     tab: "Team 6070",
-    role: "Robotics Engineer",
+    role: "Head Captain",
     date: "Spring 2022",
     tasks: [
       "Assumed a leadership role in a team of 15+ members, effectively coordinating diverse technology-related projects and initiatives.",
@@ -44,18 +44,18 @@ const Experiences = () => {
 
   return (
     <div
-      className="relative ml-[221.7px] mt-[300px] h-[1000px]"
+      className="relative ml-[221.7px] h-[900px]"
       id="experiences-section"
     >
       <h1 className="text-heading-blue font-bold text-[25px] absolute z-50">
-        EXPERIENCES ⚒️
+      ⚒️ Experiences 
       </h1>
       <img
         src={experienceBlobSVG}
         alt="experience-blob"
         className="absolute z-0 left-[-130px] top-[-280px] h-[1300px]"
       />
-      <div className="flex flex-row mt-[250px] ml-[300px] absolute z-50">
+      <div className="flex flex-row mt-[130px] ml-[300px] absolute z-50">
         <div className="text-white">
           <ul>
             {experiencesDetails.map((experience, index) => (
@@ -83,7 +83,7 @@ const Experiences = () => {
             {tasks.map((task, index) => (
               <li
                 key={index}
-                className={`text-[18px] leading-8 ${
+                className={`text-[18px] leading-8 text-[#D7F9FF] ${
                   index !== 0 ? "mt-9" : null
                 }`}
               >
@@ -95,7 +95,7 @@ const Experiences = () => {
             {tools.map((tool, index) => (
               <button
                 key={index}
-                className="px-4 py-2 bg-blue-950 text-blue-200 rounded-full border border-blue-900 hover:bg-blue-300"
+                className="px-4 py-2 bg-blue-950 text-blue-200 rounded-full border border-blue-900"
               >
                 {tool}
               </button>

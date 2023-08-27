@@ -8,7 +8,7 @@ import Projects from './Projects/projects.tsx';
 function App() {
 
   return (
-    <div className="font-outfit font-normal">
+    <div className="font-outfit font-normal bg-custom-blue">
      <Navbar navItems={["about","experiences","projects","contact"]}/>
      <Header name={"Muhammad Awan."} />
      <About/>

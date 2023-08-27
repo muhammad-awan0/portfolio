@@ -2,10 +2,10 @@ import portraitSVG from './Portrait.svg';
 
 const About = () => {
   return (
-    <div className="ml-[221.7px] mt-[300px]" id="about-section">
-      <h1 className="text-custom-pink font-bold text-[25px]">ABOUT ME 💬</h1>
-      <div className="flex flex-row">
-        <div className="text-white w-[628px] h-[478px] text-xl mr-10 leading-9">
+    <div className="ml-[221.7px] mt-[300px] h-[900px]" id="about-section">
+      <h1 className="text-custom-pink font-bold text-[25px]">💬 About Me </h1>
+      <div className="flex flex-row mt-5">
+        <div className="text-white w-[628px] h-[478px] text-xl mr-10 leading-9 opacity-80">
           <p className='mt-3'>
             During middle school, my teacher decided to introduce me to the wonderful
             world of programming through Scratch; however, after about half an hour, I

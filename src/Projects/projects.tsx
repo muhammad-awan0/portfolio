@@ -16,7 +16,6 @@ const projectsDetails: ProjectDetails[] = [
     tools: ["Tailwind", "React", "Typescript"],
   },
 
-  // ... other projects
 ];
 
 interface ProjectCardProps {
@@ -51,11 +50,12 @@ const Projects = () => {
   return (
     <div className="ml-[221.7px] h-[800px]">
       <h1 id="projects-section" className="text-projects-purple font-bold text-[25px]">
-        PERSONAL PROJECTS 🔥
+      🔥 Personal Projects 
       </h1>
       {projectsDetails.map((project, index) => (
         <ProjectCard key={index} project={project} flipLayout={index % 2 !== 0} />
       ))}
+      <h1 className='text-white text-5xl mt-52 ml-[405px]'>More Coming Soon!</h1>
     </div>
   );
 };

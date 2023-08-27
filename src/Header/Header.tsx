@@ -17,19 +17,19 @@ const Header = ({ name }: Props) => {
           <img
             src={leftPurpleSVG}
             alt="left-purple-blob"
-            className="absolute top-[10px] left-0 z-10"
+            className="absolute top-[10px] left-0 z-10 hidden md:flex"
           />
           <img
             src={tinyCircleSVG}
             alt="tiny-circle"
-            className="absolute top-[240px] left-[310px] z-50"
+            className="absolute top-[240px] left-[310px] z-50 hidden md:flex"
           />
           <img
             src={tinyCircleSVG}
             alt="tiny-circle2"
-            className="absolute top-[500px] left-[152px] z-50"
+            className="absolute top-[500px] left-[152px] z-50 hidden md:flex"
           />
-          <div className="absolute mt-[260px] ml-[190px] flex space-x-[-440px]">
+          <div className="absolute mt-[260px] ml-[190px] space-x-[-440px] hidden md:flex">
             <img
               src={middlePurpleSVG}
               alt="middle-purple-blob"
@@ -37,22 +37,26 @@ const Header = ({ name }: Props) => {
             />
             <img
               src={middleCircleSVG}
-              alt="middle-cirlce-blob"
+              alt="middle-circle-blob"
               className="z-30"
             />
           </div>
           <img
             src={rightWhiteSVG}
-            alt="right-purple-blob"
-            className="absolute top-[143px] right-[-30%] z-0 w-screen h-[900px]"
+            alt="right-white-blob"
+            className="absolute top-[143px] right-[-30%] z-0 w-screen h-[900px] hidden md:flex"
           />
         </div>
-        <div className="z-50 absolute top-[339px] left-[530px] text-cyan-100 font-bold text-109 md:top-[339px] md:left-[530px]">
-          <div className="text-white font-semibold text-3xl mb-5">
+        <div className="z-50 absolute top-[339px] left-[530px] md:left-[530px] text-cyan-100 font-bold text-3xl md:text-109">
+          <div className="text-white font-semibold text-3xl md:text-3xl mb-5">
             Hello, I'm
           </div>
-          <div>{firstName}</div>
-          <div>{lastName}</div>
+          <div className="text-white font-semibold text-3xl md:text-109 mx-2 md:mx-0">
+            {firstName}
+          </div>
+          <div className="text-white font-semibold text-3xl md:text-109 mx-2 md:mx-0">
+            {lastName}
+          </div>
         </div>
       </div>
     </header>
