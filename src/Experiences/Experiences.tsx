@@ -39,33 +39,29 @@ const experiencesDetails = [
 
 const Experiences = () => {
   const [selectedExperienceIndex, setSelectedExperienceIndex] = useState(0);
-  const { name, role, date, tasks, tools } =
-    experiencesDetails[selectedExperienceIndex];
+  const { name, role, date, tasks, tools } = experiencesDetails[selectedExperienceIndex];
 
   return (
-    <div
-      className="relative ml-[221.7px] h-[900px]"
-      id="experiences-section"
-    >
+    <div className="mt-48 md:mt-0 ml-12 md:relative md:ml-[221.7px] h-[900px]" id="experiences-section">
       <h1 className="text-heading-blue font-bold text-[25px] absolute z-50">
       ⚒️ Experiences 
       </h1>
       <img
         src={experienceBlobSVG}
         alt="experience-blob"
-        className="absolute z-0 left-[-130px] top-[-280px] h-[1300px]"
+        className="absolute hidden md:block z-0 left-[-130px] top-[-280px] h-[1300px]"
       />
-      <div className="flex flex-row mt-[130px] ml-[300px] absolute z-50">
-        <div className="text-white">
-          <ul>
+      <div className="flex flex-col md:flex-row mt-24 md:mt-[130px] md:ml-[300px] absolute z-50">
+        <div className="text-white flex flex-row md:flex-col">
+          <ul className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4">
             {experiencesDetails.map((experience, index) => (
               <li
                 key={index}
-                className={`text-xl ${
+                className={`md:text-xl ${
                   selectedExperienceIndex === index
                     ? "text-blue-500"
                     : "hover:text-blue-500"
-                } hover:cursor-pointer ${index !== 0 ? "mt-10" : null}`}
+                } hover:cursor-pointer ${index !== 0 ? "md:mt-10" : null}`}
                 onClick={() => setSelectedExperienceIndex(index)}
               >
                 {experience.tab}
@@ -73,17 +69,17 @@ const Experiences = () => {
             ))}
           </ul>
         </div>
-        <div className="text-white flex flex-col ml-[60px]">
-          <h1 className="text-[37px] font-black w-[527px] mb-[12px]">{name}</h1>
+        <div className="text-white mt-10 md:mt-0 flex flex-col md:ml-[60px]">
+          <h1 className="text-[27px] md:text-[37px] font-black w-[527px] mb-[12px]">{name}</h1>
           <div className="flex flex-row align-center">
-            <h1 className="text-xl">{role}</h1>
-            <h1 className="text-xl ml-10 opacity-70">{date}</h1>
+            <h1 className="md:text-xl">{role}</h1>
+            <h1 className="md:text-xl ml-10 opacity-70">{date}</h1>
           </div>
-          <ul className="list-disc w-[450px] mt-9 ml-4">
+          <ul className="list-disc w-[400px] md:w-[450px] mt-9 md:ml-4">
             {tasks.map((task, index) => (
               <li
                 key={index}
-                className={`text-[18px] leading-8 text-[#D7F9FF] ${
+                className={`md:text-[18px] ml-5 leading-8 text-[#D7F9FF] ${
                   index !== 0 ? "mt-9" : null
                 }`}
               >
@@ -91,11 +87,11 @@ const Experiences = () => {
               </li>
             ))}
           </ul>
-          <div className="flex flex-row mt-[50px] space-x-4  text-xl">
+          <div className="flex flex-row mt-[50px] space-x-4 md:text-xl">
             {tools.map((tool, index) => (
               <button
                 key={index}
-                className="px-4 py-2 bg-blue-950 text-blue-200 rounded-full border border-blue-900"
+                className="px-2 py-1 bg-blue-950 text-blue-200 rounded-full border border-blue-900"
               >
                 {tool}
               </button>

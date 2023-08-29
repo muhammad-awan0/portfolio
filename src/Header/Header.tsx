@@ -1,3 +1,4 @@
+import React from 'react';
 import leftPurpleSVG from "./left-purple-blur.svg";
 import rightWhiteSVG from "./right-white-blur.svg";
 import middleCircleSVG from "./middle-circle-blur.svg";
@@ -47,14 +48,14 @@ const Header = ({ name }: Props) => {
             className="absolute top-[143px] right-[-30%] z-0 w-screen h-[900px] hidden md:flex"
           />
         </div>
-        <div className="z-50 absolute top-[339px] left-[530px] md:left-[530px] text-cyan-100 font-bold text-3xl md:text-109">
-          <div className="text-white font-semibold text-3xl md:text-3xl mb-5">
+        <div className="absolute top-1/4 left-12 md:top-[339px] md:left-[530px] text-cyan-100 font-bold  md:text-109 md:z-50">
+          <div className="text-white font-semibold text-2xl md:text-3xl mb-5">
             Hello, I'm
           </div>
-          <div className="text-white font-semibold text-3xl md:text-109 mx-2 md:mx-0">
+          <div className=" mt-[-20px] font-semibold text-[60px] md:text-109">
             {firstName}
           </div>
-          <div className="text-white font-semibold text-3xl md:text-109 mx-2 md:mx-0">
+          <div className=" font-semibold text-[60px] text-2xl md:text-109">
             {lastName}
           </div>
         </div>

@@ -4,6 +4,7 @@ import Header from './Header/Header.tsx';
 import About from './About/About.tsx';
 import Experiences from './Experiences/Experiences.tsx';
 import Projects from './Projects/projects.tsx';
+import Contact from './Contact/Contact.tsx';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
      <About/>
      <Experiences />
      <Projects />
+     <Contact />
     </div>
     
   )
