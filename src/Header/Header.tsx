@@ -1,4 +1,3 @@
-import React from 'react';
 import leftPurpleSVG from "./left-purple-blur.svg";
 import rightWhiteSVG from "./right-white-blur.svg";
 import middleCircleSVG from "./middle-circle-blur.svg";
