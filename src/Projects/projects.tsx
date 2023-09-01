@@ -14,7 +14,7 @@ const projectsDetails: ProjectDetails[] = [
     image: portfolioSVG,
     details:
       "My very first personal project is this website, displaying my work experiences, interests, and journey as I become a skilled developer",
-    tools: ["Tailwind", "React", "Typescript"],
+    tools: ["Tailwind", "React", "Typescript","Node.JS"],
   },
 ];
 

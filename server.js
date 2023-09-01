@@ -5,8 +5,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-app.use(cors()); // for CORS policy
-app.use(express.json()); // for parsing JSON
+app.use(cors({
+  origin: 'muhammad-awan.vercel.app'
+}));
+app.use(express.json()); 
 
 app.post('/api/send-email', async (req, res) => {
   const { name, email, message } = req.body;
@@ -14,14 +16,14 @@ app.post('/api/send-email', async (req, res) => {
   let transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: process.env.EMAIL,  // replace with your email
-      pass: process.env.PASSWORD  // replace with your AppPassword
+      user: process.env.EMAIL,  
+      pass: process.env.PASSWORD  // AppPassword
     }
   });
 
   let mailOptions = {
     from: email,
-    to: process.env.EMAIL , // your email address to receive emails
+    to: process.env.EMAIL , 
     subject: `Contact form submission from ${name} and ${email}`,
     text: message
   };

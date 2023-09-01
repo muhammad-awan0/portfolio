@@ -41,7 +41,7 @@ interface FormData {
     return (
       <div id="contact-section" className="h-[800px] mt-40 ml-12 md:ml-[221.7px]">
         <h1 className="text-[#00E19E] font-bold text-[25px]">🤝 Contact Me</h1>
-        <div className='p-20 bg-slate-400 w-[600px] mt-24 ml-80 rounded-xl'>
+        <div className='p-20 bg-slate-400 w-[600px] mt-24 ml-80 rounded-xl border'>
             <form onSubmit={handleSubmit} className='flex flex-col w-full bg-slate-400'>
               <input type="text" name="name" placeholder="  Name" onChange={handleChange} required className='h-10 rounded-xl'/>
               <input type="email" name="email" placeholder="  Email" onChange={handleChange} required className='mt-10 h-10 rounded-xl'/>
