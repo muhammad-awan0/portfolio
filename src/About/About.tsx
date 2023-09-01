@@ -22,7 +22,7 @@ const About = () => {
 
           <p className='mt-10'>
             Anyways, here on my website, I hope to share my
-            <span className='text-about-me-blue'>experiences, projects, and insights</span> as I continue to grow and explore!
+            <span className='text-about-me-blue'> experiences, projects, and insights</span> as I continue to grow and explore!
           </p>
         </div>
         <img className="mb-10 mt-20 mr-10 md:mt-0 md:mr-0 " src={portraitSVG} alt="portrait-MuhammadAwan" />

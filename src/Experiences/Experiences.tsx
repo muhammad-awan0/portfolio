@@ -49,9 +49,9 @@ const Experiences = () => {
       <img
         src={experienceBlobSVG}
         alt="experience-blob"
-        className="absolute hidden md:block z-0 left-[-130px] top-[-280px] h-[1300px]"
+        className="absolute hidden md:block z-0 left-[-150px] top-[-280px] h-[1300px]"
       />
-      <div className="flex flex-col md:flex-row mt-24 md:mt-[130px] md:ml-[300px] absolute z-50">
+      <div className="flex flex-col md:flex-row mt-24 md:mt-[130px] md:ml-[280px] absolute z-50">
         <div className="text-white flex flex-row md:flex-col">
           <ul className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4">
             {experiencesDetails.map((experience, index) => (
