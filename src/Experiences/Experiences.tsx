@@ -53,15 +53,15 @@ const Experiences = () => {
       />
       <div className="flex flex-col md:flex-row mt-24 md:mt-[130px] md:ml-[280px] absolute z-50">
         <div className="text-white flex flex-row md:flex-col">
-          <ul className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4">
+          <ul className="flex flex-row md:flex-col space-x-4 md:mt-4 md:space-x-0 md:space-y-10">
             {experiencesDetails.map((experience, index) => (
               <li
                 key={index}
-                className={`md:text-xl ${
+                className={`md:text-lg ${
                   selectedExperienceIndex === index
                     ? "text-blue-500"
                     : "hover:text-blue-500"
-                } hover:cursor-pointer ${index !== 0 ? "md:mt-10" : null}`}
+                } hover:cursor-pointer`}
                 onClick={() => setSelectedExperienceIndex(index)}
               >
                 {experience.tab}

@@ -7,21 +7,15 @@ const About = () => {
       <div className="flex flex-col md:flex-row mt-5">
         <div className="text-white w-[400px] md:w-[628px] h-[478px] md:text-xl mr-10 leading-8 md:leading-9 opacity-80">
           <p className='mt-3'>
-            During middle school, my teacher decided to introduce me to the wonderful
-            world of programming through Scratch; however, after about half an hour, I
-            dismissed it as lame.
+          Hello and welcome! I'm on the brink of an exciting new chapter as I prepare to enter the <span className='text-about-me-blue'>Computer Science program at the University of Waterloo</span>. Over the years, I've found myself increasingly enamored with the intricacies of software development.
           </p>
 
           <p className='mt-10'>
-            Cut to today, and I am now heading off to <span className='text-about-me-blue'>the University
-              of Waterloo to study Computer Science</span>. As I developed, so did my enjoyment for
-            trying new things and learning to love learning. Although I am seemingly on a
-            path to a career in Software, I absolutely adore electronics and hardware
-            (especially robotics)
+          Regarding this website, it's not just a digital resume; consider it more as a window into my journey in the dynamic world of computer science. Here, you can browse through a curated portfolio of my projects, which range from small utilities to more ambitious ventures. 
           </p>
 
           <p className='mt-10'>
-            Anyways, here on my website, I hope to share my
+            I hope to share my
             <span className='text-about-me-blue'> experiences, projects, and insights</span> as I continue to grow and explore!
           </p>
         </div>
