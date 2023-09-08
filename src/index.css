@@ -1,3 +1,10 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+:focus {
+    border-left-width: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+  }
+  
