@@ -39,7 +39,7 @@ const ProjectCardMobile = ({ project }: ProjectCardProps) => {
       />
       
       {/* Details */}
-      <div className="flex flex-col w-[415px] ">
+      <div className="flex flex-col w-[445px] ">
         <p className="text-[#829DC7] mt-[-50px] shadow-md font-light border border-solid bg-[#040521] border-[#040521] rounded-md p-3 mb-2 w-full">
           {project.details}
         </p>
