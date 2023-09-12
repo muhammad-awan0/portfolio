@@ -6,6 +6,7 @@ interface ProjectDetails {
   image: string;
   details: string;
   tools: string[];
+  repo: string;
 }
 
 const projectsDetails: ProjectDetails[] = [
@@ -15,6 +16,7 @@ const projectsDetails: ProjectDetails[] = [
     details:
       "My very first personal project is this website, displaying my work experiences, interests, and journey as I become a skilled developer",
     tools: ["Tailwind", "React", "Typescript","Node.JS"],
+    repo: "https://github.com/muhammad-awan0/portfolio",
   },
 ];
 
@@ -27,8 +29,8 @@ const ProjectCardMobile = ({ project }: ProjectCardProps) => {
   return (
     <div className="flex flex-col items-start w-full ml-3 mt-20">
       {/* Title */}
-      <h1 className="mb-2 font-semibold text-[21px] text-[#3CA2AF] w-full text-left">
-        {project.name}
+      <h1 className="mb-2 font-semibold text-[98px] text-[#3CA2AF] w-full text-left">
+        <a href="https://github.com/muhammad-awan0/portfolio" >{project.name}</a>
       </h1>
       
       {/* Image */}
