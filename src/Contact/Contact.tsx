@@ -46,7 +46,7 @@ interface FormData {
               <input type="text" name="name" placeholder="Name" onChange={handleChange} required className='text-white bg-[#0F0F37] border-b-2 outline-none border-b-white h-10 focus:border-[#9055A2] focus:border-l-0 focus:border-t-0 focus:border-r-0 transition-all duration-500 ease-linear'/>
               <input type="email" name="email" placeholder="Email" onChange={handleChange} required className='text-white mt-10 h-10 bg-[#0F0F37] border-b-2 outline-none border-b-white focus:border-[#9055A2] focus:border-l-0 focus:border-t-0 focus:border-r-0 transition-all duration-500 ease-linear'/>
               <textarea name="message" placeholder="Your message" onChange={handleChange} required className='mt-10 h-40 bg-cyan-50 outline-none rounded-xl pl-3 pt-3'></textarea>
-              <button type="submit" className='mt-10 text-cyan-400 border border-cyan-400 p-3'>Send</button>
+              <button type="submit" className='mt-10 text-cyan-400 border border-cyan-400 p-3 hover:bg-cyan-400 hover:text-custom-blue duration-200 '>Send</button>
             </form>
         </div>
       </div>

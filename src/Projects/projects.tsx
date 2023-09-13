@@ -30,7 +30,7 @@ const ProjectCardMobile = ({ project }: ProjectCardProps) => {
     <div className="flex flex-col items-start w-full ml-3 mt-20">
       {/* Title */}
       <h1 className="mb-2 font-semibold text-[21px] text-[#3CA2AF] w-full text-left">
-        <a className="hover:text-teal-300 duration-300" href={project.repo}>{project.name}</a>
+        <a className= "hover:text-teal-300 duration-300" href={project.repo}>{project.name}</a>
       </h1>
       
       {/* Image */}

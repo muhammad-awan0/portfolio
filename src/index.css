@@ -8,3 +8,22 @@
     border-right-width: 0;
   }
   
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #04051F;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: cyan;
+    border-radius: 5px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
