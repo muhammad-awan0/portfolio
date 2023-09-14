@@ -30,7 +30,7 @@ const experiencesDetails = [
     role: "Head Captain",
     date: "Spring 2022",
     tasks: [
-      "Assumed a leadership role in a team of 15+ members, effectively coordinating diverse technology-related projects and initiatives.",
+      "Assumed a leadership role in a team of 50+ members, effectively coordinating diverse technology-related projects and initiatives.",
       "Facilitated various STEM activities and programs, aiming to foster enthusiasm and participation in the scientific community.",
     ],
     tools: ["Java", "WPLib", "Fusion 360"],
