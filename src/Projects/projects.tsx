@@ -72,7 +72,7 @@ const ProjectCardDesktop = ({ project, flipLayout }: ProjectCardProps) => {
       <img
         src={project.image}
         alt={project.name}
-        className="z-10 mt-[200px] w-[494px] h-[332.99px]"
+        className="z-10 mt-[200px] w-[494px] h-[332.99px] hue-rotate-[10deg] hover:hue-rotate-0 duration-1000 hover:cursor-pointer"
       />
       <div
         className={`flex flex-col self-center z-20 mt-[180px] ${
