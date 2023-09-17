@@ -11,7 +11,7 @@ import ScrollFadeIn from './Scroll.tsx';
 function App() {
   return (
     <div className="font-outfit font-normal bg-custom-blue">
-      <Navbar navItems={["about","experiences","projects","contact"]} />
+      <Navbar/>
       <Header name={"Muhammad Awan."} />
       <ScrollFadeIn>
         <About />

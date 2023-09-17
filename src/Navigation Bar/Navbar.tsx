@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import githubSvg from './github.svg';
 import instaSvg from './insta.svg';
 import linkedinSvg from './linkedin.svg';
+import resumeSVG from './resume.svg';
 
-interface Props {
-  navItems: string[];
-}
 
-const Navbar: React.FC<Props> = ({ navItems }) => {
+const navItems = ["about","experiences","project","contact"]
+
+const Navbar = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
@@ -35,7 +35,7 @@ const Navbar: React.FC<Props> = ({ navItems }) => {
             <img className="mt-1 hover:cursor-pointer" src={githubSvg} alt="GitHub" />
           </a>
           <a
-            href="https://instagram.com/"
+            href="https://instagram.com/muhammad.awan0"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -47,6 +47,13 @@ const Navbar: React.FC<Props> = ({ navItems }) => {
             rel="noopener noreferrer"
           >
             <img className="mt-1 hover:cursor-pointer" src={linkedinSvg} alt="LinkedIn" />
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1uXrDRZ2_tVRr2uth6lzPfh4p6GCvnVHY/view?usp=sharing" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="mt-1 hover:cursor-pointer" src={resumeSVG} alt="Resume" />
           </a>
         </div>
         {/* Navbar */}
