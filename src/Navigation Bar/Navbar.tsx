@@ -49,7 +49,7 @@ const Navbar = () => {
             <img className="mt-1 hover:cursor-pointer" src={linkedinSvg} alt="LinkedIn" />
           </a>
           <a
-            href="https://drive.google.com/file/d/1uXrDRZ2_tVRr2uth6lzPfh4p6GCvnVHY/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1p4hGs3bUl4gn6TXPMy3EvJ-WmjFPFq9t/view?usp=sharing" 
             target="_blank"
             rel="noopener noreferrer"
           >
