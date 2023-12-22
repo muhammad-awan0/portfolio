@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import portfolioSVG from "./Portfolio-img.svg";
+import playingcardSVG from "./beakman_Aces.svg";
 
 interface ProjectDetails {
   name: string;
@@ -17,6 +18,14 @@ const projectsDetails: ProjectDetails[] = [
       "My very first personal project is this website, displaying my work experiences, interests, and journey as I become a skilled developer",
     tools: ["Tailwind", "React", "Typescript","Node.JS"],
     repo: "https://github.com/muhammad-awan0/portfolio",
+  },
+  {
+    name: "Markovian Blackjack Analysis",
+    image: playingcardSVG,
+    details:
+      "Conducted a comprehensive analysis of blackjack using Markov Chains to deduce optimal strategies for beating the house!",
+    tools: ["Python", "Numpy"],
+    repo: "https://drive.google.com/file/d/19JkWsUmtKEP-PXMiNYVAxsAapI7Thyqm/view?usp=sharing",
   },
 ];
 
@@ -72,7 +81,7 @@ const ProjectCardDesktop = ({ project, flipLayout }: ProjectCardProps) => {
       <img
         src={project.image}
         alt={project.name}
-        className="z-10 mt-[200px] w-[494px] h-[332.99px] hue-rotate-[10deg] hover:hue-rotate-0 duration-1000 hover:cursor-pointer"
+        className="z-10 mt-[200px] w-[494px] h-[332.99px] hue-rotate-[10deg] hover:hue-rotate-0 duration-1000 hover:cursor-pointer blur-sm hover:blur-none"
       />
       <div
         className={`flex flex-col self-center z-20 mt-[180px] ${

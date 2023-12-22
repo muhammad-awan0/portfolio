@@ -35,6 +35,18 @@ const experiencesDetails = [
     ],
     tools: ["Java", "WPLib", "Fusion 360"],
   },
+  {
+    name: "MIT-PIT-RW",
+    tab: "MIT Driverless",
+    role: "Software Developer",
+    date: "Fall 2023",
+    tasks: [
+      "Collaborated in a team of 30+ to develop an autonomous race car for the Indy Autonomous Challenge",
+      "Played a pivotal role in programming and integrating autonomous path planning and decision making.",
+      "Simulated vehicle navigation and performed trajectory analysis!"
+    ],
+    tools: ["Python", "ROS2","Numpy","matplotlib"],
+  },
 ];
 
 const Experiences = () => {
