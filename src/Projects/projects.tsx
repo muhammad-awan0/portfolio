@@ -73,7 +73,6 @@ const ProjectCard: React.FC<{ project: ProjectDetails }> = ({ project }) => {
 // Main Projects component
 const Projects: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -89,9 +88,10 @@ const Projects: React.FC = () => {
 
   return (
     <div className="pt-12 pb-24 px-4 md:px-12">
-      <h1 className="text-heading-blue font-bold text-4xl absolute z-50 ml-32">
+      <h1 className= {`font-bold absolute z-50 text-violet-600 ${isMobile ? 'text-4xl ml-10' : 'text-4xl ml-32'}`}>
       🔥 Personal Projects
       </h1>
+      
       <div className="space-y-8">
         {projectsDetails.map((project, index) => (
           <ProjectCard key={index} project={project} />
