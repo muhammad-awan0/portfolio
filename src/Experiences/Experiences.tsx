@@ -55,7 +55,7 @@ const Experiences = () => {
 
   return (
     <div className="mt-48 md:mt-0 ml-12 md:relative md:ml-[221.7px] h-[900px]" id="experiences-section">
-      <h1 className="text-heading-blue font-bold text-[25px] absolute z-50">
+      <h1 className="text-heading-blue font-bold text-4xl absolute z-50">
       ⚒️ Experiences 
       </h1>
       <img

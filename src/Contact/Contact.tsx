@@ -40,7 +40,7 @@ interface FormData {
   
     return (
       <div id="contact-section" className="h-[800px] mt-40 ml-12 md:ml-[221.7px]">
-        <h1 className="text-[#00E19E] font-bold text-[25px]">🤝 Contact Me</h1>
+        <h1 className="text-[#00E19E] font-bold text-4xl">🤝 Contact Me</h1>
         <div className='p-20 bg-[#0F0F37] w-[450px] md:w-[600px] mt-10 md:mt-24 md:ml-80 rounded-xl border-[#0F0F37] shadow-xl'>
             <form onSubmit={handleSubmit} className='flex flex-col w-full bg-[#0F0F37]'>
               <input type="text" name="name" placeholder="Name" onChange={handleChange} required className='text-white bg-[#0F0F37] border-b-2 outline-none border-b-white h-10 focus:border-[#9055A2] focus:border-l-0 focus:border-t-0 focus:border-r-0 transition-all duration-500 ease-linear'/>

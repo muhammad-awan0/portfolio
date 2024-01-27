@@ -1,7 +1,11 @@
-import { useEffect, useState } from "react";
-import portfolioSVG from "./Portfolio-img.svg";
-import playingcardSVG from "./beakman_Aces.svg";
+import React, { useEffect, useState } from 'react';
 
+// Import your SVG assets
+import portfolioSVG from './Portfolio-img.svg';
+import playingcardSVG from './beakman_Aces.svg';
+import calliopeLogo from './calliope-logo.png';
+
+// Define the type for each project's details
 interface ProjectDetails {
   name: string;
   image: string;
@@ -10,151 +14,92 @@ interface ProjectDetails {
   repo: string;
 }
 
+// An array of projects
 const projectsDetails: ProjectDetails[] = [
   {
-    name: "This Website!",
+    name: 'This Website!',
     image: portfolioSVG,
     details:
-      "My very first personal project is this website, displaying my work experiences, interests, and journey as I become a skilled developer",
-    tools: ["Tailwind", "React", "Typescript","Node.JS"],
-    repo: "https://github.com/muhammad-awan0/portfolio",
+      'My very first personal project is this website, displaying my work experiences, interests, and journey as I become a skilled developer',
+    tools: ['Tailwind', 'React', 'Typescript', 'Node.JS'],
+    repo: 'https://github.com/muhammad-awan0/portfolio',
   },
   {
-    name: "Markovian Blackjack Analysis",
+    name: 'Markovian Blackjack Analysis',
     image: playingcardSVG,
     details:
-      "Conducted a comprehensive analysis of blackjack using Markov Chains to deduce optimal strategies for beating the house!",
-    tools: ["Python", "Numpy"],
-    repo: "https://drive.google.com/file/d/19JkWsUmtKEP-PXMiNYVAxsAapI7Thyqm/view?usp=sharing",
+      'Conducted a comprehensive analysis of blackjack using Markov Chains to deduce optimal strategies for beating the house!',
+    tools: ['Python', 'Numpy'],
+    repo: 'https://drive.google.com/file/d/19JkWsUmtKEP-PXMiNYVAxsAapI7Thyqm/view?usp=sharing',
+  },
+  {
+    name: 'Calliope',
+    image: calliopeLogo,
+    details:
+      'Calliope is as an AI-powered music recommendation system crafted using the MERN stack and Flask. Through a custom music recommendation algorithm, Calliope can analyze various aspects of your preferred songs, from acoustics to valence, and present a curated list of similar tracks.',
+    tools: ['React-Redux', 'Javascript', 'Node.JS', 'Spotify-API', 'Python', 'scikit-learn'],
+    repo: 'https://drive.google.com/file/d/19JkWsUmtKEP-PXMiNYVAxsAapI7Thyqm/view?usp=sharing',
   },
 ];
 
-interface ProjectCardProps {
-  project: ProjectDetails;
-  flipLayout?: boolean;
-}
-
-const ProjectCardMobile = ({ project }: ProjectCardProps) => {
+// Component for individual project cards
+const ProjectCard: React.FC<{ project: ProjectDetails }> = ({ project }) => {
   return (
-    <div className="flex flex-col items-start w-full ml-3 mt-20">
-      {/* Title */}
-      <h1 className="mb-2 font-semibold text-[21px] text-[#3CA2AF] w-full text-left">
-        <a className= "hover:text-teal-300 duration-300" href={project.repo}>{project.name}</a>
-      </h1>
-      
-      {/* Image */}
-      <img
-        src={project.image}
-        alt={project.name}
-        className="w-[400px] mt-[-50px] h-[400px] mb-2"
-      />
-      
-      {/* Details */}
-      <div className="flex flex-col w-[445px] ">
-        <p className="text-[#829DC7] mt-[-50px] shadow-md font-light border border-solid bg-[#040521] border-[#040521] rounded-md p-3 mb-2 w-full">
-          {project.details}
-        </p>
-      </div>
-      
-      {/* Tools */}
-      <div className="flex flex-row space-x-4 text-cyan-300 mt-1 justify-start w-full">
-        {project.tools.map((tool, index) => (
-          <p
-            key={index}
-            className="border border-cyan-600 bg-blue-950 border-solid p-2 rounded-2xl"
-          >
-            {tool}
-          </p>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const ProjectCardDesktop = ({ project, flipLayout }: ProjectCardProps) => {
-  return (
-    <div
-      className={`relative flex flex-md:flex-row w-[990px] md:ml-[90px] mt-[-100px] ${
-        flipLayout ? "flex-row-reverse" : "flex-row"
-      }`}
-    >
-      <img
-        src={project.image}
-        alt={project.name}
-        className="z-10 mt-[200px] w-[494px] h-[332.99px] hue-rotate-[10deg] hover:hue-rotate-0 duration-1000 hover:cursor-pointer blur-sm hover:blur-none"
-      />
-      <div
-        className={`flex flex-col self-center z-20 mt-[180px] ${
-          flipLayout ? "mr-[-50px]" : "ml-[-50px]"
-        }`}
-      >
-        <h1
-          className={`mb-7 font-semibold text-[21px] text-[#3CA2AF]  ${
-            flipLayout ? "text-left" : "text-right"
-          }`}
-        >
-          <a className= "hover:text-teal-300 duration-300" href={project.repo}>{project.name}</a>
-        </h1>
-        <div className="flex flex-col">
-          <p className="text-[18px] text-[#829DC7] shadow-md font-light border border-solid bg-[#040521] border-[#040521] rounded-md p-5">
-            {project.details}
-          </p>
-          <div
-            className={`flex flex-row space-x-4 text-cyan-300 mt-5 justify-center ${
-              flipLayout ? "mr-[290px]" : "ml-[290px]"
-            } text-[14px]`}
-          >
-            {project.tools.map((tool, index) => (
-              <p
-                key={index}
-                className="border border-cyan-600 bg-blue-950 border-solid p-2 rounded-2xl"
-              >
-                {tool}
-              </p>
-            ))}
-          </div>
+    <div className="mt-10 max-w-xl mx-auto my-8 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+      <a href={project.repo} target="_blank" rel="noopener noreferrer">
+        <img
+          src={project.image}
+          alt={project.name}
+          className="w-full h-64 object-cover"
+        />
+      </a>
+      <div className="p-6">
+        <h2 className="text-xl text-teal-300 font-semibold hover:underline">
+          {project.name}
+        </h2>
+        <p className="text-gray-300 mt-2">{project.details}</p>
+        <div className="mt-4">
+          {project.tools.map((tool, index) => (
+            <span key={index} className="inline-block bg-teal-700 text-teal-200 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">
+              {tool}
+            </span>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-const Projects = () => {
-  const [isMobile, setMobile] = useState(window.innerWidth <= 768);
+// Main Projects component
+const Projects: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth < 768);
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    handleResize();
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
+
   return (
-    <div className="ml-12 md:ml-[221.7px]">
-      <h1
-        id="projects-section"
-        className="text-projects-purple font-bold text-[25px]"
-      >
-        🔥 Personal Projects
+    <div className="pt-12 pb-24 px-4 md:px-12">
+      <h1 className="text-heading-blue font-bold text-4xl absolute z-50 ml-32">
+      🔥 Personal Projects
       </h1>
-      {projectsDetails.map((project, index) =>
-        isMobile ? (
-          <ProjectCardMobile key={index} project={project} />
-        ) : (
-          <ProjectCardDesktop
-            key={index}
-            project={project}
-            flipLayout={index % 2 !== 0}
-          />
-        )
-      )}
-      <h1 className="text-white text-5xl mt-52 md:ml-[405px]">
+      <div className="space-y-8">
+        {projectsDetails.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </div>
+      <h2 className="text-3xl text-center text-teal-300 mt-20">
         More Coming Soon!
-      </h1>
+      </h2>
     </div>
   );
 };
